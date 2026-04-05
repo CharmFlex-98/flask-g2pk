@@ -3,7 +3,13 @@ version: "3.7"
 services:
   g2pk:
     image: ${DOCKER_LOGIN_USERNAME}/hangul_diary_flask_g2pk:latest
-    command: flask run --host=0.0.0.0
+    command: gunicorn --bind 0.0.0.0:8000 --workers 2 app:app
     ports:
-      - 8000:5000
+      - 8000:8000
     restart: unless-stopped
+    networks:
+      - korean_diary_network
+
+networks:
+  korean_diary_network:
+    external: true

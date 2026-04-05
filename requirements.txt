@@ -13,3 +13,4 @@ pybind11==2.9.2
 regex==2022.7.9
 tqdm==4.64.0
 python-dotenv==0.20.0
+gunicorn==21.2.0
