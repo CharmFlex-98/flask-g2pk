@@ -3,7 +3,7 @@ FROM python:3.9
 # mecab start
 RUN apt-get update && \
   apt-get install -y --no-install-recommends tzdata g++ git curl
-RUN apt-get install python3-setuptools
+RUN apt-get install -y python3-setuptools
 RUN apt-get install -y default-jdk default-jre
 # mecab end
 
