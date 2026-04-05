@@ -1,13 +1,5 @@
 FROM python:3.9
 
-# Python
-RUN apt-get update && \
-  apt-get install -y --no-install-recommends apt-utils && \
-  apt-get -y install software-properties-common && \
-  apt-get update --fix-missing && \
-  apt-get -y install --fix-missing python3-pip && \
-  python3 -m pip install pip --upgrade
-
 # mecab start
 RUN apt-get update && \
   apt-get install -y --no-install-recommends tzdata g++ git curl
