@@ -1,14 +1,9 @@
 version: "3.7"
 
 services:
-  python:
-    platform: linux/amd64
-    build: .
+  g2pk:
+    image: ${DOCKER_LOGIN_USERNAME}/hangul_diary_flask_g2pk:latest
     command: flask run --host=0.0.0.0
     ports:
       - 8000:5000
-    volumes:
-      - ./:/app
-
-volumes:
-  python_data:
+    restart: unless-stopped
