@@ -1,11 +1,11 @@
 from flask import Flask, request
-from mecab import Mecab
+from mecab import MeCab
 from g2pk import G2p
 
 app = Flask(__name__)
 
 
-mecab = Mecab()
+mecab = MeCab()()
 g2p = G2p()
 
 
