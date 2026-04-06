@@ -4,7 +4,6 @@ RUN apt-get update && \
   apt-get install -y --no-install-recommends \
     tzdata g++ git curl autoconf automake libtool && \
   apt-get install -y python3-setuptools && \
-  apt-get install -y default-jdk default-jre && \
   rm -rf /var/lib/apt/lists/*
 
 # Install mecab-ko manually with system config.guess/config.sub for ARM64 support.
@@ -39,10 +38,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt && \
   pip install --no-cache-dir \
     nltk==3.6.7 \
-    konlpy==0.6.0 \
     mecab-ko==1.0.0 \
     mecab-python==1.0.0 \
-    python-mecab-ko==1.0.14 \
+    python-mecab-ko==1.3.7 \
     git+https://github.com/CharmFlex-98/g2pK.git@master
 
 ENV LANG=C.UTF-8
