@@ -43,7 +43,7 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     mecab-ko==1.0.0 \
     mecab-python==1.0.0 \
     python-mecab-ko==1.0.14 \
-    g2pk==0.9.4
+    git+https://github.com/CharmFlex-98/g2pK.git@master
 
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
