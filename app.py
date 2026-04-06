@@ -5,7 +5,7 @@ from g2pk import G2p
 app = Flask(__name__)
 
 
-mecab = MeCab()()
+mecab = MeCab()
 g2p = G2p()
 
 
