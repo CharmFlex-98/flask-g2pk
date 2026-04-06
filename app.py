@@ -37,6 +37,8 @@ def get_mecab():
 @app.route('/g2pk')
 def run_g2pk():
     k_str = request.args.get('q', '')
-    print(k_str)
-    res = g2p(k_str)
-    return {'result': res}
+    res, rules = g2p(k_str, verbose=True)
+    return {
+        'result': res, 
+        'rules': rules
+    }
