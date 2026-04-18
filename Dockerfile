@@ -37,7 +37,7 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt && \
   pip install --no-cache-dir \
-    nltk==3.6.7 \
+    nltk==3.8.1 \
     mecab-ko==1.0.0 \
     mecab-python==1.0.0 \
     python-mecab-ko==1.3.7 \
