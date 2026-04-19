@@ -13,5 +13,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           echo "${{ secrets.DOCKER_LOGIN_PW }}" | docker login -u "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
-          docker build -t ${{ secrets.DOCKER_LOGIN_USERNAME }}/hangul_diary_flask_g2pk:latest .
+          docker build --build-arg ACCESS_TOKEN={{ secrets.G2PK_REPO_ACCESS_TOKEN }} -t ${{ secrets.DOCKER_LOGIN_USERNAME }}/hangul_diary_flask_g2pk:latest .
           docker push ${{ secrets.DOCKER_LOGIN_USERNAME }}/hangul_diary_flask_g2pk:latest
