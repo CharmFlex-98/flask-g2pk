@@ -42,7 +42,7 @@ RUN git config --global url."https://${ACCESS_TOKEN}@github.com/".insteadOf "htt
     mecab-ko==1.0.0 \
     mecab-python==1.0.0 \
     python-mecab-ko==1.3.7 \
-    git+https://github.com/CharmFlex-98/g2pK.git@master
+    git+https://github.com/CharmFlex-98/g2pk-optimized.git
 
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
